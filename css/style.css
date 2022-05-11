@@ -45,7 +45,7 @@ h1 {
 
 
 /* Animated type writer - Credit: https://codepen.io/aakhya/pen/EOxqOV */
-p.type-writer {
+.myname {
   border-right: solid 3px rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;
@@ -55,10 +55,20 @@ p.type-writer {
 }
 
 /* Animation */
+.myname {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+
+/*
+This was the original but differnt screen sizes messes with the view
 p.type-writer {
   animation: animated-text 4s steps(29,end) 1s 1 normal both,
              animated-cursor 600ms steps(29,end) infinite;
 }
+*/
+
 
 /* text animation */
 
@@ -67,12 +77,16 @@ p.type-writer {
   to{width: 313px;}
 }
 
+
+
 /* cursor animations */
 
 @keyframes animated-cursor{
   from{border-right-color: rgba(0,255,0,.75);}
   to{border-right-color: transparent;}
 }
+
+
 
 /* END of Typewiter Animation snippet*/
 
@@ -97,4 +111,8 @@ p.type-writer {
 .construction > svg {
   display: block;
   margin: auto;
+}
+
+.construction a:link {
+  color: aquamarine;
 }
